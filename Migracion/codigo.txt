@@ -1,0 +1,62 @@
+create database EjemploLoadCSV;
+
+create table usuario
+(
+	idUsuario int not null identity,
+	Documento varchar(45) not null,
+	Nombre varchar (45) not null,
+	Apellido varchar(45) not null,
+	Correo varchar(45) not null,
+	Contraseña varchar(45) not null,
+	Direccion varchar(45) not null,
+	Telefono int not null,
+)
+create table sede
+(
+	idSede int not null identity,
+	Nombre_Sede varchar(45) not null,
+)
+create table genero
+(
+	idGenero int not null identity,
+	Descripcion_Genero varchar(45) not null,
+)
+create table atencion
+(
+	idAtencion int not null identity,
+	Calificacion varchar(45) not null,
+)
+create table ticket
+(
+	idTicket int not null identity,
+	Asunto_Ticket varchar(45) not null,
+	Descripcion_Ticket varchar(45) not null,
+	Fecha_Ticket varchar(45) not null,
+)
+create table subcategoria
+(
+	idSubcategoria int not null identity,
+	Descripcion_Sub varchar(45) not null,
+)
+create table categoria
+(
+	idCategoria int not null identity,
+	Descripcion_Categoria varchar(45) not null,
+)
+create table tecnico
+(
+	idTecnico int identity not null,
+	Nombre_Tecnico varchar(45) not null,
+	Telefono_Tecnico varchar(45) not null,
+)
+create table tipousuario
+(
+	idTipousuario int identity not null,
+	Descripcion_usuario varchar(45) not null,
+)
+
+LOAD DATA local INFILE 'D:\Migracion/Empleado.csv'
+INTO TABLE Empleado
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES(nombre,fecha,salario);

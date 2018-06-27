@@ -1,0 +1,235 @@
+/*Fuente Body*/
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+h1,h2,h3,h4,h5{
+    font-family: 'Do Hyeon', sans-serif;
+}
+/*Fuente Body*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background: #1F6685;
+}
+*{
+    box-sizing: border-box;
+}
+
+.contenedor{
+    margin: auto;
+    
+}
+/*Etiqueta IMG*/
+img{
+    display: block;
+    width:100%;
+}
+
+/*-------------------HEADER----------------------*/
+.header{
+    height: 60px;
+    justify-content: space-between;
+    background: #2F3E77;
+    padding: 10px;
+    text-align: center;
+}
+.header .contenedor{
+    display: flex;
+}
+.logo,.icon-menu{
+    margin: 5px;
+    color: #fff;
+}
+.icon-menu{
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 27px;
+    background: #00AEFD;
+    color: #2F3E77;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    margin-left: auto;
+    cursor: pointer;
+}
+/*-------------------------MENU OCULTO--------------*/
+.nav{
+    position: absolute;
+    top: 79px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/*----------------------COLORES DE MENU--------------*/
+.menu__link{
+    display: block;
+    padding: 10px;
+    background: #00AEFD;
+    text-decoration: none;
+    color: #fff;
+}
+.menu__link:hover, .select{
+    background: #fff;
+    color: #2E86C1;
+}
+
+.mostrar{
+    left: 0;
+}
+
+/*----------------------BANNER--------------*/
+.banner{
+    position: relative;
+    z-index: -1000;
+}
+.banner .contenedor{
+    position: absolute;
+    top: 50%;
+    transition: translateX(-50%) translateY(-50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.banner__img{
+    justify-content: center;
+    
+}
+/*------------------ESTILOS REGISTRO----------------------*/
+h1{
+    text-align: center;
+    color: white;
+}
+.formulario-registro{
+    width: 98%;
+    max-width: 500px;
+    margin: auto;
+    background: #2F3E77;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.titulo-formulario{
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    border-radius: 8px;
+    border-bottom: 5px solid #1F6685;
+    
+}
+
+.contenedor-inputs{
+    padding: 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+input{
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: solid #2F3E77;
+}
+select{
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.input-50{
+    width: 50%;
+}
+.input-100{
+    width: 100%;
+}
+.boton-enviar{
+    background: #00AEFD;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.boton-enviar:hover{
+    background: #1F6685;
+}
+.boton-enviar:active{
+    transform: scale(1.05);
+}
+.link-login{
+    color: white;
+}
+.margenGenero{
+    margin-top: 4px;
+    margin-bottom: 18px;
+}
+
+/*---------------------ESTILOS DE FOOTER--------------*/
+
+.footer{
+    background: #2F3E77;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer .social [class^="icon-"]{
+    color: #2F3E77;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 5px;
+    background: white;
+    border-radius: 56%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    
+}
+
+/*-------------ESTILOS RESPONSIVE---------------*/
+
+@media(min-width:1024px){
+    .contenedor{
+        width: 900px;
+    }
+    .nav{
+        position: static;
+        width: auto;
+    }
+    .menu{
+        display: flex;
+        margin-left: 80%;
+    }
+    
+    .icon-menu{
+        display: none;
+    }
+    .menu__link{
+        background: none;
+        font-size: 20px;
+    }
+    .select{
+        background: white;
+    }
+}
+
+@media(min-width:1280px){
+    .contenedor{
+        width: 1200px;
+    }
+    .banner .contenedor {
+        top: 40%;
+    }
+    .info{
+        margin-top: -200px;
+    }
+    .menu{
+        margin-left: 200%;
+    }
+}

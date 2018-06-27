@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+h1,h2,h3,h4,h5{
+    font-family: 'Do Hyeon', sans-serif;
+}
+/*Fuente Body*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+}
+html {
+  min-height: 100%;
+  position: relative;
+}
+*{
+    box-sizing: border-box;
+}
+
+.contenedor{
+    margin: auto;
+    
+}
+.titulos{
+    text-align: center;
+    margin-top: 200px;
+    font-size: 60px;
+    color: #00AEFD;
+}
+img{
+    position: relative;
+}
+
+/*-------------------HEADER----------------------*/
+header{
+    height: 60px;
+    justify-content: space-between;
+    background: #2F3E77;
+    padding: 10px;
+    text-align: center;
+}
+.header .contenedor{
+    display: flex;
+}
+.logo,.icon-menu{
+    margin: 2px;
+    color: #fff;
+}
+.icon-menu{
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 27px;
+    background: #00AEFD;
+    color: #2F3E77;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    margin-left: auto;
+    cursor: pointer;
+}
+/*-------------------------MENU OCULTO--------------*/
+.nav{
+    position: absolute;
+    top: 60px;;
+    left: -100%;
+    width: 100%;
+    transition: all 0.5s;
+    z-index: 3;
+    
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/*----------------------COLORES DE MENU--------------*/
+.menu__link{
+    display: block;
+    padding: 10px;
+    background: #00AEFD;
+    text-decoration: none;
+    color: #fff;
+}
+.menu__link:hover, .select{
+    background: #fff;
+    color: #2E86C1;
+}
+
+.mostrar{
+    left: 0;
+}
+/*-----------------TABLA-------------------*/
+table{
+    width: 100px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    border-collapse: collapse;
+    
+}
+th, td{
+    text-align: center;
+    padding: 20px;
+} 
+td{
+    border: solid #2F3E77;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+th{
+    background: #2F3E77;
+    border: solid #2F3E77;
+    color: white;
+}
+.blue{
+    background: #00AEFD;
+    padding: 0px;
+}
+.yellow{
+    background: yellow;
+    padding: 0px;
+}
+.red{
+   background: red;
+    padding: 0px; 
+}
+.green{
+    background: green;
+    padding: 0px; 
+}
+/*--------------FORMULARIO CONSULTA------------------*/
+form{
+    width: 800px;
+    margin: auto;
+    border-radius: 5%;
+    padding: 5px 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+h3{
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+input{
+    height: 25px;
+    text-align: center;
+    margin-top: 4.5%;
+    border-radius: 9px;
+    border: solid black;
+}
+select{
+    border-radius: 9px;
+    background: #2F3E77;
+    color: white;
+    width: 20%;
+    height: 30px;
+    margin-top: 15px;
+    border: solid black;
+}
+button{
+    background: #2F3E77;
+    color: white;
+    border-radius: 8px;
+    border: solid black;
+    margin: auto;
+    height: 25px;
+    margin-top: 10px;
+    cursor: -webkit-grab; 
+    cursor: grab;
+}
+button:active{
+    transform: scale(1.20);
+    cursor: -webkit-grabbing; 
+    cursor: grabbing;
+}
+button:hover{
+    background:#00AEFD; 
+}
+.margen-25{
+    width: 17%;
+}
+.asunto{
+    margin-top: 15px;
+    height: 30px;
+    font-size: 15px;
+}
+::placeholder{
+    color: #2F3E77;
+}
+.fecha1{
+    margin: auto;
+    margin-top: 10px;
+    background: #2F3E77;
+    color: white;
+    border: solid black;
+    width: 25%;
+}
+.tit_fechas{
+    width: 10%;
+    margin-top: 13px;
+    font-size: 16px;
+}
+.boton{
+    margin-top: -70px;
+}
+.boton-buscar{
+    
+}
+
+/*---------------------ESTILOS DE FOOTER--------------*/
+
+footer{
+    background: #2F3E77;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer .social [class^="icon-"]{
+    color: #2F3E77;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 5px;
+    background: white;
+    border-radius: 56%;
+    width: 50px;
+    height: 50px;
+    line-height: 2px;
+}
+
+/*-----------------------ESTILOS RESPONSIVE-------------------*/
+
+@media(min-width:1024px){
+    .contenedor{
+        width: 900px;
+    }
+    .nav{
+        position: static;
+        width: auto;
+    }
+    .menu{
+        display: flex;
+        margin-left: 80%;
+    }
+    
+    .icon-menu{
+        display: none;
+    }
+    .menu__link{
+        background: none;
+        font-size: 16px;
+    }
+    .select{
+        background: white;
+    }
+}

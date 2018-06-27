@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+h1,h2,h3,h4,h5{
+    font-family: 'Do Hyeon', sans-serif;
+}
+/*Fuente Body*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background: #00AEFD;
+}
+*{
+    box-sizing: border-box;
+}
+
+.contenedor{
+    margin: auto;
+    
+}
+
+/*-------------------HEADER----------------------*/
+.header{
+    height: 60px;
+    justify-content: space-between;
+    background: #2F3E77;
+    padding: 10px;
+    text-align: center;
+}
+.header .contenedor{
+    display: flex;
+}
+.logo,.icon-menu{
+    margin: 2px;
+    color: #fff;
+}
+.icon-menu{
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 27px;
+    background: #00AEFD;
+    color: #2F3E77;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    margin-left: auto;
+    cursor: pointer;
+}
+/*-------------------------MENU OCULTO--------------*/
+.nav{
+    position: absolute;
+    top: 60px;;
+    left: -100%;
+    width: 100%;
+    transition: all 0.5s;
+    z-index: 3;
+    
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/*----------------------COLORES DE MENU--------------*/
+.menu__link{
+    display: block;
+    padding: 10px;
+    background: #00AEFD;
+    text-decoration: none;
+    color: #fff;
+}
+.menu__link:hover, .select{
+    background: #fff;
+    color: #2E86C1;
+}
+
+.mostrar{
+    left: 0;
+}
+/*---------------------TITULOS------------------------*/
+
+.titulos{
+    text-align: center;
+    margin-top: 200px;
+    font-size: 60px;
+    color: white;;
+    background:#2F3E77; 
+}
+/*----------------------ESTILOS NOMBRE-----------------*/
+.nom_usu{
+    font-size: 50px;
+    text-align: center;
+    margin-top: -40px;;
+    background:#2F3E77; 
+    color: white;
+}
+/*-------------------ADMIN------------------------------------*/
+.tituloA{
+    margin-top: -0px;
+    color: white;;
+    background:#2F3E77;
+    height: 60px;
+    font-size: 40px;
+    text-align: center;
+}
+/*---------------------ESTILOS DE FOOTER--------------*/
+
+.footer{
+    background: #2F3E77;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+
+.footer .social [class^="icon-"]{
+    color: #2F3E77;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 5px;
+    background: white;
+    border-radius: 56%;
+    width: 50px;
+    height: 50px;
+    line-height: 2px;
+}
+
+
+
+/*-----------------------ESTILOS RESPONSIVE-------------------*/
+
+@media(min-width:1024px){
+    .contenedor{
+        width: 900px;
+    }
+    .nav{
+        position: static;
+        width: auto;
+    }
+    .menu{
+        display: flex;
+        margin-left: 80%;
+    }
+    
+    .icon-menu{
+        display: none;
+    }
+    .menu__link{
+        background: none;
+        font-size: 16px;
+    }
+    .select{
+        background: white;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

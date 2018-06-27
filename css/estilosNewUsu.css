@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+h1,h2,h3,h4,h5{
+    font-family: 'Do Hyeon', sans-serif;
+}
+/*Fuente Body*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    background-color: #C1BDBA;
+}
+html {
+  min-height: 100%;
+  position: relative;
+}
+*{
+    box-sizing: border-box;
+}
+
+.contenedor{
+    margin: auto;
+    
+}
+.titulos{
+    text-align: center;
+    margin-top: 200px;
+    font-size: 60px;
+    color: #00AEFD;
+}
+img{
+    position: relative;
+}
+
+/*-------------------HEADER----------------------*/
+header{
+    height: 60px;
+    justify-content: space-between;
+    background: #2F3E77;
+    padding: 10px;
+    text-align: center;
+}
+.header .contenedor{
+    display: flex;
+}
+.logo,.icon-menu{
+    margin: 2px;
+    color: #fff;
+}
+.icon-menu{
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 27px;
+    background: #00AEFD;
+    color: #2F3E77;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    margin-left: auto;
+    cursor: pointer;
+}
+/*-------------------------MENU OCULTO--------------*/
+.nav{
+    position: absolute;
+    top: 60px;;
+    left: -100%;
+    width: 100%;
+    transition: all 0.5s;
+    z-index: 3;
+    
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/*----------------------COLORES DE MENU--------------*/
+.menu__link{
+    display: block;
+    padding: 10px;
+    background: #00AEFD;
+    text-decoration: none;
+    color: #fff;
+}
+.menu__link:hover, .select{
+    background: #fff;
+    color: #2E86C1;
+}
+
+.mostrar{
+    left: 0;
+}
+/*--------------------ESTILOS CREAR USUARIO------------------*/
+form{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 98%;
+    max-width: 500px;
+    background: #24323D;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+h2{
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    width: 100%;
+    background: #435259;
+    border: 3px solid #00AEFD;
+    border-bottom: none;
+    border-top: none;
+}
+h3{
+    font-weight: 100;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+input{
+    background: #24323D; 
+    width: 47%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #00AEFD;
+    margin: auto;
+    margin-bottom: 2%;
+    color: #00AEFD;
+}
+::placeholder{
+    color: white;
+}
+select{
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #00AEFD;
+    margin: auto;
+    background: #24323D;
+    color: white;
+    margin-bottom: 2%;
+}
+label{
+    width: 50%;
+    color: white;
+    margin-bottom: 4px;
+}
+.selectP{
+    width: 47%;
+}
+.in100{
+    width: 90%;
+}
+.w50{
+    width: 50%;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+.boton{
+    background-color: #435259;
+    width: 30%;
+    cursor: pointer;
+    color: white;
+}
+.boton:hover{
+    background-color: #00AEFD;
+    border: 4px solid #435259;
+}
+/*---------------------ESTILOS DE FOOTER--------------*/
+
+footer{
+    background: #2F3E77;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer .social [class^="icon-"]{
+    color: #2F3E77;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 5px;
+    background: white;
+    border-radius: 56%;
+    width: 50px;
+    height: 50px;
+    line-height: 2px;
+}
+
+/*-----------------------ESTILOS RESPONSIVE-------------------*/
+
+@media(min-width:1024px){
+    .contenedor{
+        width: 900px;
+    }
+    .nav{
+        position: static;
+        width: auto;
+    }
+    .menu{
+        display: flex;
+        margin-left: 80%;
+    }
+    
+    .icon-menu{
+        display: none;
+    }
+    .menu__link{
+        background: none;
+        font-size: 16px;
+    }
+    .select{
+        background: white;
+    }
+}

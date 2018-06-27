@@ -1,0 +1,585 @@
+/*Fuente Body*/
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+h1,h2,h3,h4,h5{
+    font-family: 'Do Hyeon', sans-serif;
+}
+/*Fuente Body*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-color:#173347;
+}
+*{
+    box-sizing: border-box;
+}
+
+.contenedor{
+    margin: auto;
+    
+}
+/*Etiqueta IMG*/
+img{
+    display: block;
+    width:100%;
+}
+
+/*-------------------HEADER----------------------*/
+.header{
+    height: 60px;
+    justify-content: space-between;
+    background: #2F3E77;
+    padding: 10px;
+    text-align: center;
+}
+.header .contenedor{
+    display: flex;
+}
+.logo,.icon-menu{
+    margin: 5px;
+    color: #fff;
+}
+.icon-menu{
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 27px;
+    background: #00AEFD;
+    color: #2F3E77;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    margin-left: auto;
+    cursor: pointer;
+}
+/*-------------------------MENU OCULTO--------------*/
+.nav{
+    position: absolute;
+    top: 79px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/*----------------------COLORES DE MENU--------------*/
+.menu__link{
+    display: block;
+    padding: 10px;
+    background: #00AEFD;
+    text-decoration: none;
+    color: #fff;
+}
+.menu__link:hover, .select{
+    background: #fff;
+    color: #2E86C1;
+}
+
+.mostrar{
+    left: 0;
+}
+
+/*----------------------BANNER--------------*/
+.banner{
+    margin-top: -60px;
+    position: relative;
+    z-index: -1000;
+    margin-bottom: 10px;
+}
+.banner .contenedor{
+    position: absolute;
+    top: 50%;
+    transition: translateX(-50%) translateY(-50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.banner__txt{
+    display: none;
+}
+
+/*---------------------ESTILOS DE INFO--------------*/
+
+.info__columna{
+    background: #00AEFD;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;  
+}
+.info__titulo{
+    text-align: center;
+}
+.info__txt{
+    text-align: center;
+}
+.info__img{
+    width: 100%;
+}
+
+/*---------------------ESTILOS DE MISION ETC....--------------*/
+
+.section__titulo{
+    text-align: center;
+    font-size: 40px;
+    color: #00AEFD;
+}
+
+.cursos__columna{
+    position: relative;
+    margin-bottom: 10px;
+    background: #00AEFD;
+}
+
+.cursos__descripcion{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.cursos__titulo{
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+/*---------------------ESTILOS DE FOOTER--------------*/
+
+.footer{
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer .social [class^="icon-"]{
+    color: #333;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 5px;
+    background: white;
+    border-radius: 56%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    
+}
+
+/*---------------------ESTILOS RESPONSIVE--------------*/
+
+@media(min-width:480px){
+    .logo{
+        font-size: 40px;
+    }
+    .banner__titulo{
+        font-size: 30px;
+        margin: 5px 0;
+    }
+    .bammer__txt{
+        display: block;
+        font-size: 18px;
+        margin: 7px 0;
+    }
+    .info, .cursos {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -70px;
+    }
+    .info__columna{
+        width: 32%;
+    }
+    .info__titulo{
+        font-size: 30px;
+        margin: 5px 0;
+    }
+    
+    .section__titulo{
+        width: 100%;
+    }
+    .cursos{
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+    .cursos__columna{
+        width: 49%;
+    }
+    
+}
+
+@media(min-width:768px){
+    .banner__titulo{
+        font-size: 50px;
+    }
+    .cursos__titulo{
+        font-size: 40px;
+    }
+}
+
+@media(min-width:1024px){
+    .contenedor{
+        width: 900px;
+    }
+    .section__titulo{
+        font-size: 50px;
+        margin: 20px 0;
+    }
+    .nav{
+        position: static;
+        width: auto;
+    }
+    .menu{
+        display: flex;
+    }
+    
+    .icon-menu{
+        display: none;
+    }
+    .menu__link{
+        background: none;
+        font-size: 20px;
+    }
+    .select{
+        background: white;
+    }
+    .banner__titulo{
+        font-size: 65px;
+    }
+    .info{
+        margin-top: -100px;
+    }
+    .info__columna {
+        padding: 30px;
+    }
+    .info__titulo{
+        font-size: 40px;
+        text-align: center;
+    }
+    .cursos__descripcion{
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .cursos__titulo{
+        font-size: 50px;
+    }
+    .cursos__txt{
+        font-size: 20px;
+    }
+    .menu{
+        margin-left: 80%;
+    }
+    
+}
+
+@media(min-width:1280px){
+    .contenedor{
+        width: 1200px;
+    }
+    .banner .contenedor {
+        top: 40%;
+    }
+    .info{
+        margin-top: -200px;
+    }
+    .menu{
+        margin-left: 200%;
+    }
+}
+
+/*Fuente Body*/
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+h1,h2,h3,h4,h5{
+    font-family: 'Do Hyeon', sans-serif;
+}
+/*Fuente Body*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+
+.contenedor{
+    margin: auto;
+    
+}
+/*Etiqueta IMG*/
+img{
+    display: block;
+    width:100%;
+}
+
+/*-------------------HEADER----------------------*/
+.header{
+    height: 60px;
+    justify-content: space-between;
+    background: #2F3E77;
+    padding: 10px;
+    text-align: center;
+}
+.header .contenedor{
+    display: flex;
+}
+.logo,.icon-menu{
+    margin: 5px;
+    color: #fff;
+}
+.icon-menu{
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 27px;
+    background: #00AEFD;
+    color: #2F3E77;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    margin-left: auto;
+    cursor: pointer;
+}
+/*-------------------------MENU OCULTO--------------*/
+.nav{
+    position: absolute;
+    top: 79px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/*----------------------COLORES DE MENU--------------*/
+.menu__link{
+    display: block;
+    padding: 10px;
+    background: #00AEFD;
+    text-decoration: none;
+    color: #fff;
+}
+.menu__link:hover, .select{
+    background: #fff;
+    color: #2E86C1;
+}
+
+.mostrar{
+    left: 0;
+}
+
+/*----------------------BANNER--------------*/
+.banner{
+    margin-top: -60px;
+    position: relative;
+    z-index: -1000;
+    margin-bottom: 10px;
+}
+.banner .contenedor{
+    position: absolute;
+    top: 50%;
+    transition: translateX(-50%) translateY(-50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.banner__txt{
+    display: none;
+}
+
+/*---------------------ESTILOS DE INFO--------------*/
+
+.info__columna{
+    background: #00AEFD;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;  
+}
+.info__img{
+    width: 100%;
+}
+
+/*---------------------ESTILOS DE MISION ETC....--------------*/
+
+.section__titulo{
+    text-align: center;
+    font-size: 40px;
+    color: #00AEFD;
+}
+
+.cursos__columna{
+    position: relative;
+    margin-bottom: 10px;
+    background: #00AEFD;
+}
+
+.cursos__descripcion{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.cursos__titulo{
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+/*---------------------ESTILOS DE FOOTER--------------*/
+
+.footer{
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer .social [class^="icon-"]{
+    color: #333;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 5px;
+    background: white;
+    border-radius: 56%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    
+}
+
+/*---------------------ESTILOS RESPONSIVE--------------*/
+
+@media(min-width:480px){
+    .logo{
+        font-size: 40px;
+    }
+    .banner__titulo{
+        font-size: 30px;
+        margin: 5px 0;
+    }
+    .bammer__txt{
+        display: block;
+        font-size: 18px;
+        margin: 7px 0;
+    }
+    .info, .cursos {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -70px;
+    }
+    .info__columna{
+        width: 32%;
+    }
+    .info__titulo{
+        font-size: 30px;
+        margin: 5px 0;
+    }
+    
+    .section__titulo{
+        width: 100%;
+    }
+    .cursos{
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+    .cursos__columna{
+        width: 49%;
+    }
+    
+}
+
+@media(min-width:768px){
+    .banner__titulo{
+        font-size: 50px;
+    }
+    .cursos__titulo{
+        font-size: 40px;
+    }
+}
+
+@media(min-width:1024px){
+    .contenedor{
+        width: 900px;
+    }
+    .section__titulo{
+        font-size: 50px;
+        margin: 20px 0;
+    }
+    .nav{
+        position: static;
+        width: auto;
+    }
+    .menu{
+        display: flex;
+    }
+    
+    .icon-menu{
+        display: none;
+    }
+    .menu__link{
+        background: none;
+        font-size: 20px;
+    }
+    .select{
+        background: white;
+    }
+    .banner__titulo{
+        font-size: 65px;
+    }
+    .info{
+        margin-top: -100px;
+    }
+    .info__columna {
+        padding: 30px;
+    }
+    .info__titulo{
+        font-size: 40px;
+        text-align: center;
+    }
+    .cursos__descripcion{
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .cursos__titulo{
+        font-size: 50px;
+    }
+    .cursos__txt{
+        font-size: 20px;
+    }
+    .menu{
+        margin-left: 80%;
+    }
+    
+}
+
+@media(min-width:1280px){
+    .contenedor{
+        width: 1200px;
+    }
+    .banner .contenedor {
+        top: 40%;
+    }
+    .info{
+        margin-top: -200px;
+    }
+    .menu{
+        margin-left: 200%;
+    }
+}
+
