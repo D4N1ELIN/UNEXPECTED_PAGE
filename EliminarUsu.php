@@ -18,11 +18,11 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>Eliminar Usuario</title>
+        <title>Estado Usuario</title>
            <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/superslides.css">
-        <link rel="stylesheet" href="css/estilosNewUsu.css">
+        <link rel="stylesheet" href="css/cambiarUsu.css">
     </head>
     <body>
       
@@ -40,7 +40,7 @@
         </header>
         
         <form action="deleteUserAdmin.php" method="post">
-            <h2>Eliminar Usuario</h2>
+            <h2>Estado Usuario</h2>
             
             <?php
             while($lista= $resultado->fetch_array(MYSQLI_BOTH))

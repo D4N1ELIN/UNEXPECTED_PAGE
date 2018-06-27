@@ -2,7 +2,6 @@
 
     include 'conexion.php';
     
-    
     $num_id = $_GET["id"];
         
         
